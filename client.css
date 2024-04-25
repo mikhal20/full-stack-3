@@ -1,0 +1,172 @@
+body{
+    background-color: rgb(247, 241, 230);
+}
+
+h1{
+  text-align: center; /* Align text to center */
+
+}
+
+  .sign_in{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Comic Sans';
+    font-size: 50px;
+  }
+
+
+.input-sign_in, #todoInput,.task-input, #searchInput{
+  width: 300px;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s ease;
+}
+
+.input-sign_in:focus, #todoInput:focus,.task-input:focus, #searchInput:focus {
+  outline: none;
+  border-color: #007bff; /* Change border color when input is focused */
+  box-shadow: 0 0 5px #007bff; /* Add a subtle shadow when input is focused */
+}
+  /* style sign up page*/
+  
+  .sign_up{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: 'Comic Sans';
+    font-size: 40px;
+  }
+    
+  /* Style the to do list */
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 21px 22px;
+}
+
+.close-button:hover {
+  background-color: #f44336;
+  color: white;
+}
+ul{
+  list-style: none;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  width: 700px; 
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+
+.edit_btn{
+  position: absolute;
+  right: 20;
+  top: 20;
+  padding: 12px 16px 12px 16px;
+
+}
+
+
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Hover state */
+button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Focus state */
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff; /* Adds a subtle focus ring */
+}
+
+h2, #todoInput, #logout_btn{
+  margin-left: 40px;
+}
+.hidden {
+  display: none; /* or visibility: hidden; */
+}
+
+
+.todo-background {
+  position: relative; /* Ensure relative positioning */
+  overflow: hidden; /* Ensure child elements don't overflow */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
+  
+}
+
+.todo-background::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute; /* Position the pseudo-element */
+  top: 0; /* Align it to the top of the div */
+  left: 0; /* Align it to the left of the div */
+  width: 100%; /* Cover the entire width of the div */
+  height: 100%;
+  background-image: url("/IMAGES/to_do_pic.jpeg"); /* Replace 'path/to/your/image.jpg' with the actual path to your background image */
+  background-size: cover; /* Ensure the background image covers the entire div */
+  opacity: 0.3; /* Set the opacity for the background only */
+  z-index: -1; /* Ensure the background is behind the content */
+}
+
+.todo-container {
+  position: relative; /* Ensure relative positioning */
+  z-index: 1; /* Ensure the content is above the background */
+  
+}
+
+

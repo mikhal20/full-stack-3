@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/client.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
+    <title>to- do list</title>
+</head>
+<body >
+
+    
+    <h1>To Do List</h1>  
+
+<template id="sign_in_template">
+    <div  id="sign_in_div" class = "sign_in"  >        
+        <form name='form-login'>
+
+              <div class="group">
+                  <label for="userEmail" class="label title_label">Email</label>
+                  <input class="input-sign_in" id="userMail" placeholder="UserMail" required>
+              </div>
+              <div class="group">
+                  <label for="userPw" class="label title_label">Password</label>
+                  <input type="password" class="input-sign_in" id= "userPw" placeholder="Password" required>
+              </div>
+              <div class="group">
+                  <button id= "SignIn_btn" type="submit" onclick="signIn_toDo()">Sign In</button>
+                  <button id= "SignUp_btn"  type="submit" onclick="signIn_signUp()">Sign Up</button>
+              </div>
+      </form>
+</div>
+
+</template>
+    <template  id="sign_up"   >
+        <div id="sign_up_div" class="sign_up" >
+           
+                <form name='form-login'>
+                        
+                        <div class="group">
+                            <label for="name" class="label title_label">Name</label>
+                            <input type="text" id="name" class="input-sign_in" placeholder="Username" required>
+                        </div>
+                        <div class="group">
+                            <label for="email" class="label title_label">Email</label>
+                            <input type="email" class="input-sign_in" id= "email" placeholder="Email" required>
+                         </div>
+    
+                        <div class="group">
+                            <label for="pw" class="label title_label">Password</label>
+                            <input type="password" class="input-sign_in" id= "pw" placeholder="Password" required>
+                         </div>
+    
+                         <div class="group">
+                            <label for="pw" class="label title_label">Repeat Password</label>
+                            <input type="password" class="input-sign_in" id= "repeat_pw" placeholder="Confirm Password" required >
+                         </div>
+    
+                        <div class="group">
+                            <button  type="submit" onclick="sign_up_input()">Sign Up</button>
+                        <br>         
+                </form>
+         </div>
+    </template>
+
+    <template id="todo_list">
+        <div id="todo_list_div" class="todo-background"> 
+        <button id="logout_btn" onclick="LogOut_func()">Logout</button>
+        <span style="margin-right: 10px;"></span>
+        <input type="text" id="searchInput" placeholder="search..." onkeypress="handleKeyPress(event)">
+
+          <div class="todo-container">
+            <h2>My To-Do List</h2>
+            <input type="text" id="todoInput" placeholder="Enter task...">
+            <button onclick="addTask()">Add</button>
+            <ul id="todoList"></ul>
+          </div>
+        </div>
+      </template>
+      
+      <script  type="text/javascript" src="../JS/Client.js"></script> 
+      <script  type="text/javascript" src="../JS/FXMLHttpRequest.js"></script> 
+      <script  type="text/javascript" src="../JS/network.js"></script> 
+      <script  type="text/javascript" src="../JS/Server.js"></script>
+      <script  type="text/javascript" src="../JS/DB_API.js"></script>       
+       
+</body>
+</html>
